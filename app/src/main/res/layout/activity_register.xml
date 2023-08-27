@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.adidata.ui.activity.register.RegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <include layout="@layout/navigation_bar_with_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Nama"
+                android:textStyle="bold"
+                android:textColor="#3A3A3A"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Nama"
+                android:inputType="text"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@={data.nameField}"
+                android:textColor="#333333"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="#3A3A3A"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLength="25"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@={data.emailField}"
+                android:textColor="#333333"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Kata Sandi"
+                android:textStyle="bold"
+                android:textColor="#3A3A3A"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Kata Sandi"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@={data.passwordField}"
+                android:textColor="#333333"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Konfirmasi Kata Sandi"
+                android:textStyle="bold"
+                android:textColor="#3A3A3A"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Konfirmasi Kata Sandi"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@={data.confirmPasswordField}"
+                android:textColor="#333333"
+                android:textColorHint="#BDBDBD"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="Daftar"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_blue"
+                android:layout_marginTop="34dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

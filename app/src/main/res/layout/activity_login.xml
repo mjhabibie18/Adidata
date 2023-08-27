@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.adidata.ui.activity.login.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="28dp"
+        android:background="#FFFFFF"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adidata"
+            android:textStyle="bold"
+            android:textColor="#3A3A3A"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Email"
+            android:textStyle="bold"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input_field"
+            android:gravity="center_vertical"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@={data.emailField}"
+            android:textColor="#333333"
+            android:textColorHint="#BDBDBD"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Kata Sandi"
+            android:textStyle="bold"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input_field"
+            android:gravity="center_vertical"
+            android:hint="Kata Sandi"
+            android:inputType="textPassword"
+            android:maxLength="25"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@={data.passwordField}"
+            android:textColor="#333333"
+            android:textColorHint="#BDBDBD"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="Masuk"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_blue"
+            android:layout_marginTop="34dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="48dp"
+            android:text="Belum punya akun ? Daftar"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>
